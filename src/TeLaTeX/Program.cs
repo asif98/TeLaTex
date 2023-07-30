@@ -31,9 +31,9 @@ namespace TeLaTeX
                 cancellationToken: cts.Token
             );
             
-            var me = await botClient.GetMeAsync(cts.Token);
+            var user = await botClient.GetMeAsync(cts.Token);
         
-            Console.WriteLine($"Start listening for @{me.Username}");
+            Console.WriteLine($"Start listening for @{user.Username}");
             Console.ReadLine();
 
             // Send cancellation request to stop bot
